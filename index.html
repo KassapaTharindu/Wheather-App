@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Weather App</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     .material-symbols-outlined {
@@ -22,7 +23,7 @@
       </button>
     </header>
 
-    <section class="wheather-info">
+    <section class="wheather-info" style="display: none;">
 
       <!-- Date Left | Colombo Right -->
       <div class="location-date-container">
@@ -84,7 +85,25 @@
           <h5 class="forecast-item-temp">27 °C</h5>
         </div>
       </div>
+    </section>
 
+    <section class="search-city section-message">
+      <img  src="Assets/search.png" alt="">
+      <div>
+        <h1>Search City</h1>
+        <h4 class="regular-text">
+          Find out the wheather condition of the city
+        </h4>
+      </div>
+    </section>
+    <section class="not-found section-message" style="display: none;">
+      <img  src="Assets/404.png" alt="">
+      <div>
+        <h1>Search City</h1>
+        <h4 class="regular-text">
+          Find out the wheather condition of the city
+        </h4>
+      </div>
     </section>
   </main>
 </body>

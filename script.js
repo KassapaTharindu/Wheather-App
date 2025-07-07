@@ -19,9 +19,13 @@ cityInput.addEventListener('keydown', (event) => {
     }
 })
 
-function getFetchData() {
-    
+async function getFetchData(endPoint,city) {
+    const apiUrl = 'https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}'
+
+    const response =await fetch(apiUrl)
+    return response.json();
 }
-function updateWheaterInfo(city) {
-        const wheatherData = getFetchData()
+async function updateWheaterInfo(city) {
+        const wheatherData =await getFetchData('weather', city);
+        console.info(wheatherData);
 }

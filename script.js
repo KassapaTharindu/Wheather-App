@@ -36,6 +36,10 @@ async function getFetchData(endPoint, city) {
     return response.json();
 }
 
+function getWheatherIconId(id) {
+    if(id <= 232) return
+}
+
 async function updateWeatherInfo(city) {
     const weatherData = await getFetchData('weather', city);
 
@@ -52,8 +56,13 @@ async function updateWeatherInfo(city) {
         wind:{speed},
     } = weatherData
     
-    countryText.textContent = country;
-    temptxt.textContent = temp+'°C';
+    countryText.textContent = country
+    temptxt.textContent = temp+'°C'
+    conditionText.textContent = main
+    humidityText.textContent = humidity+'%'
+    windSpeedText.textContent = speed+'M/s'
+    wheatherSummeryImg.src = `Assets/wheather/${getWheatherIconId(id)}`;
+ 
 
     showDisplaySection(wheatherInfoSection);
 }

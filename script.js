@@ -4,6 +4,14 @@ const notFoundSection = document.querySelector('.not-found');
 const searchSection = document.querySelector('.search-city');
 const wheatherInfoSection = document.querySelector('.weather-info');
 
+const countryText = document.querySelector('.country-text');
+const temptxt = document.querySelector('.temp-text');
+const conditionText = document.querySelector('.condition-text');
+const humidityText = document.querySelector('.humidity-value-txt');
+const windSpeedText = document.querySelector('.wind-value-txt');
+const wheatherSummeryImg = document.querySelector('.weather-summery-img');
+const currentDateText = document.querySelector('.current-date-txt');
+
 const apiKey = 'f3bbfae56737f4c910952f628023577a';
 
 searchBtn.addEventListener('click', () => {
@@ -35,10 +43,24 @@ async function updateWeatherInfo(city) {
         showDisplaySection(notFoundSection)
         return;
     }
+    console.log(weatherData);
+
+    const{
+        name: country,
+        main:{temp, humidity},
+        wheather:[{id, main}],
+        wind:{speed},
+    } = weatherData
     
+    countryText.textContent = country;
+    temptxt.textContent = temp+'°C';
+
+    showDisplaySection(wheatherInfoSection);
 }
 
 function showDisplaySection(section) {
     [wheatherInfoSection, searchSection, notFoundSection ]
         .forEach(section => section.style.display = 'none');
+
+        section.style.display = 'flex'
 }

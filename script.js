@@ -37,8 +37,25 @@ async function getFetchData(endPoint, city) {
 }
 
 function getWheatherIconId(id) {
-    if(id <= 232) return
+    if(id <= 232) return 'thunder.png'
+    if(id <= 321) return 'drizzle.png'
+    if(id <= 531) return 'raining.png'
+    if(id <= 622) return 'snow.png'
+    if(id <= 781) return 'atmosphere.png'
+    if(id <= 800) return 'Clear.png'
+    else return 'clouds.png';
 }
+
+function getCurrentDate() {
+    const currentDate = new Date();
+    const options = {
+        weekday: 'short',
+        month: 'short',
+        day: '2-digit',
+        
+    };
+   return currentDate.toLocaleDateString('en-GB', options);
+}    
 
 async function updateWeatherInfo(city) {
     const weatherData = await getFetchData('weather', city);
@@ -61,6 +78,8 @@ async function updateWeatherInfo(city) {
     conditionText.textContent = main
     humidityText.textContent = humidity+'%'
     windSpeedText.textContent = speed+'M/s'
+
+    currentDateText.textContent = getCurrentDate();
     wheatherSummeryImg.src = `Assets/wheather/${getWheatherIconId(id)}`;
  
 

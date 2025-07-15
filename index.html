@@ -23,9 +23,7 @@
       </button>
     </header>
 
-    <section class="wheather-info" style="display: none;">
-
-      <!-- Date Left | Colombo Right -->
+    <section class="weather-info" style="display: none;">
       <div class="location-date-container">
         <h5 class="current-date-text regular-txt">Mon, 07 July</h5>
         <div class="location">
@@ -34,17 +32,15 @@
         </div>
       </div>
 
-      <!-- Temp Left | Image Right -->
-      <div class="wheather-summery-container">
-        <div class="wheather-summery-info">
+      <div class="weather-summary-container">
+        <div class="weather-summary-info">
           <h1 class="temp-text">27 °C</h1>
           <h3 class="condition-txt regular-text">Clouds</h3>
         </div>
-        <img src="Assets/wheather/cloud.png" class="wheather-summery-img" />
+        <img src="Assets/weather/clouds.png" class="weather-summary-img" />
       </div>
 
-      <!-- Wind Left | Humidity Right -->
-      <div class="wheather-condition-container">
+      <div class="weather-condition-container">
         <div class="condition-item wind">
           <span class="material-symbols-outlined">air</span>
           <div class="condition-info">
@@ -62,47 +58,22 @@
         </div>
       </div>
 
-      <!-- Forecast Cards -->
-      <div class="forecast-item-container">
-        <div class="forecast-item">
-          <h5 class="forecast-item-date regular-text">07 July</h5>
-          <img src="Assets/wheather/thunder.png" class="forecast-item-img" />
-          <h5 class="forecast-item-temp">27 °C</h5>
-        </div>
-        <div class="forecast-item">
-          <h5 class="forecast-item-date regular-text">07 July</h5>
-          <img src="Assets/wheather/thunder.png" class="forecast-item-img" />
-          <h5 class="forecast-item-temp">27 °C</h5>
-        </div>
-        <div class="forecast-item">
-          <h5 class="forecast-item-date regular-text">07 July</h5>
-          <img src="Assets/wheather/thunder.png" class="forecast-item-img" />
-          <h5 class="forecast-item-temp">27 °C</h5>
-        </div>
-        <div class="forecast-item">
-          <h5 class="forecast-item-date regular-text">07 July</h5>
-          <img src="Assets/wheather/thunder.png" class="forecast-item-img" />
-          <h5 class="forecast-item-temp">27 °C</h5>
-        </div>
-      </div>
+      <div class="forecast-item-container"></div>
     </section>
 
     <section class="search-city section-message">
-      <img  src="Assets/search.png" alt="">
+      <img src="Assets/search.png" alt="Search city image" />
       <div>
         <h1>Search City</h1>
-        <h4 class="regular-text">
-          Find out the wheather condition of the city
-        </h4>
+        <h4 class="regular-text">Find out the weather condition of the city</h4>
       </div>
     </section>
+
     <section class="not-found section-message" style="display: none;">
-      <img  src="Assets/404.png" alt="">
+      <img src="Assets/404.png" alt="Not found image" />
       <div>
-        <h1>Search City</h1>
-        <h4 class="regular-text">
-          Find out the wheather condition of the city
-        </h4>
+        <h1>City Not Found</h1>
+        <h4 class="regular-text">Please try searching for another city</h4>
       </div>
     </section>
   </main>
